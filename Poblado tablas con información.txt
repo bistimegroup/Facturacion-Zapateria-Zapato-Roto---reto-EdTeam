@@ -1,0 +1,93 @@
+//Poblado de las tablas con informacion by Juan Pablo Saavedra Mendoza +57 312 4807848
+
+
+insert into producto (id_producto, nombre_producto, presentacion_pro, valor_producto)
+              values ("ZP-00001-2020","ZAPATO PARA HOMBRE","COLOR NEGRO CLASICO",150000);
+insert into producto (id_producto, nombre_producto, presentacion_pro, valor_producto)
+              values ("ZP-00002-2020","ZAPATO PARA DAMA","COLOR CAFE CLASICO",450000);
+insert into producto (id_producto, nombre_producto, presentacion_pro, valor_producto)
+              values ("ZP-00003-2020","ZAPATILLA","COLOR BLANCO CLASICO",350000);
+insert into producto (id_producto, nombre_producto, presentacion_pro, valor_producto)
+              values ("ZP-00004-2020","ZAPATO MOCASIN","MOCASIN BLANCO",100000);
+insert into producto (id_producto, nombre_producto, presentacion_pro, valor_producto)
+              values ("ZP-00005-2020","ZAPATO 100% EN CUERO","MOCASIN AZUL",250000);
+
+
+insert into cliente (id_cliente, nombre_cliente, pais_cliente)
+             values ("93393589", "JUAN PABLO SAAVEDRA MENDOZA", "COLOMBIA");
+insert into cliente (id_cliente, nombre_cliente, pais_cliente)
+             values ("52186111", "ISABEL RUIZ PEREZ", "COLOMBIA");
+insert into cliente (id_cliente, nombre_cliente, pais_cliente)
+             values ("1123987453", "JOSE MARIA LOZANO MEDINA", "PERU");
+insert into cliente (id_cliente, nombre_cliente, pais_cliente)
+             values ("J44532144", "OSWAR VILLORIA LOPEZ", "VENEZUELA");
+insert into cliente (id_cliente, nombre_cliente, pais_cliente)
+             values ("J44311232", "JUAN JOSE ARIAS ARIAS", "VENEZUELA");
+
+
+insert into factura_cab (id_factura, id_cliente, fecha_fact, observacion)
+                 values (1,"93393589", "01/06/2020","Factura generada a un cliente muy especial");
+insert into factura_cab (id_factura, id_cliente, fecha_fact, observacion)
+                 values (2,"51286111", "02/06/2020","");
+insert into factura_cab (id_factura, id_cliente, fecha_fact, observacion)
+                 values (3,"1123987453", "03/06/2020","Se aplican descuentos autorizado solo por hoy");
+insert into factura_cab (id_factura, id_cliente, fecha_fact, observacion)
+                 values (4,"J44532144", "01/06/2020","");
+insert into factura_cab (id_factura, id_cliente, fecha_fact, observacion)
+                 values (5,"J44311232", "02/06/2020","");
+insert into factura_cab (id_factura, id_cliente, fecha_fact, observacion)
+                 values (6,"93393589", "03/06/2020","");
+insert into factura_cab (id_factura, id_cliente, fecha_fact, observacion)
+                 values (7,"93393589", "04/06/2020","");
+
+
+insert into factura_det (id_factura,id_producto, cantidad, valor_prod, impuesto, descuento, valor_pagar)
+                 values (1,"ZP-00001-2020",2,150000,15000,0,330000); 
+insert into factura_det (id_factura,id_producto, cantidad, valor_prod, impuesto, descuento, valor_pagar)
+                 values (1,"ZP-00002-2020",1,450000,45000,45000,450000);
+insert into factura_det (id_factura,id_producto, cantidad, valor_prod, impuesto, descuento, valor_pagar)
+                 values (2,"ZP-00005-2020",2,250000,50000,0,450000);
+insert into factura_det (id_factura,id_producto, cantidad, valor_prod, impuesto, descuento, valor_pagar)
+                 values (3,"ZP-00002-2020",1,450000,45000,45000,450000); 
+insert into factura_det (id_factura,id_producto, cantidad, valor_prod, impuesto, descuento, valor_pagar)
+                 values (3,"ZP-00004-2020",5,100000,50000,20000,530000);
+insert into factura_det (id_factura,id_producto, cantidad, valor_prod, impuesto, descuento, valor_pagar)
+                 values (4,"ZP-00003-2020",3,350000,35000,0,1015000);
+insert into factura_det (id_factura,id_producto, cantidad, valor_prod, impuesto, descuento, valor_pagar)
+                 values (5,"ZP-00001-2020",10,150000,150000,0,1650000);
+insert into factura_det (id_factura,id_producto, cantidad, valor_prod, impuesto, descuento, valor_pagar)
+                 values (6,"ZP-00005-2020",2,250000,50000,0,550000);
+insert into factura_det (id_factura,id_producto, cantidad, valor_prod, impuesto, descuento, valor_pagar)
+                 values (7,"ZP-00003-2020",2,350000,70000,0,770000);
+
+
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00001-2020","Entrada","31/05/2020",20);
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00002-2020","Entrada","31/05/2020",10);
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00003-2020","Entrada","31/05/2020",10);
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00004-2020","Entrada","31/05/2020",5);
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00005-2020","Entrada","31/05/2020",15);
+
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00001-2020","Salida","01/06/2020",2);
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00002-2020","Salida","01/06/2020",1);
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00005-2020","Salida","02/06/2020",2);
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00002-2020","Salida","03/06/2020",1);
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00004-2020","Salida","03/06/2020",5);
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00003-2020","Salida","01/06/2020",3);
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00001-2020","Salida","02/06/2020",10);
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00005-2020","Salida","03/06/2020",2);
+inser into inventario (id_producto, tipo_movim, fecha, cantidad)
+               values ("ZP-00003-2020","Salida","04/06/2020",2);
+
