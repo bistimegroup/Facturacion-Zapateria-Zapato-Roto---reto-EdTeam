@@ -1,0 +1,46 @@
+//Creación Base de Datos Facturación Zapateria el Zapato Roto
+//by Juan Pablo Saavedra Mendoza +57 312 4807848
+
+create database facturacion_zazaro;
+
+create table producto
+(
+  id_producto      varchar(20)  not null,
+  nombre_producto  varchar(100) not null,
+  presentacion_pro varchar(200) not null,
+  valor_producto   float(20,2)  not null
+);
+
+create table cliente
+(
+  id_cliente     varchar(20)  not null,
+  nombre_cliente varchar(100) not null,
+  pais_cliente   varchar(20)  not null
+);
+
+create table factura_cab
+(
+  id_factura  serial       not null,
+  id_cliente  varchar(20)  not null,
+  fecha_fact  date(10)     not null,
+  observacion varchar(200) 
+);
+
+create table factura_det
+(
+  id_factura  integer     not null,
+  id_producto varchar(20) not null,
+  cantidad    smallint    not null,
+  valor_prod  float(12,2) not null,
+  impuesto    float(12,2) not null,
+  descuento   float(12,2) not null,
+  valor_pagar float(16,2) not null
+);
+
+create table inventario
+(
+  id_producto varchar(20) not null,
+  tipo_movim  varchar(10) not null,
+  fecha       date        not null,
+  cantidad    smallint    not null
+);

@@ -1,0 +1,26 @@
+//Consultas Solicitadas by Juan Pablo Saavedra Mendoza +57 312 4807848
+
+
+//Consulta la facturación de un cliente en específico.
+select * from factura_cab a, factura_det b
+ where a.id_cliente = "93393589"
+   and a.id_factura = b.id_factura;
+
+
+//Consulta la facturación de un producto en específico.
+select * from factura_cab a, factura_det b
+ where b.id_producto = "ZP-00005-2020"
+   and a.id_factura = b.id_factura;
+
+
+//Consulta la facturación de un rango de fechas
+select * from factura_cab a, factura_det b
+ where a.fecha_fact between "01/06/2020" and "03/06/2020" 
+   and a.id_factura = b.id_factura;
+
+
+//De la facturación, consulta los clientes únicos 
+//(es decir, se requiere el listado de los clientes que han comprado por lo menos una vez, 
+//pero en el listado no se debe repetir los clientes)
+select unique a.id_cliente from factura_cab a, factura_det b
+ where a.id_factura = b.id_factura;
